@@ -19,11 +19,11 @@ class _TasksListState extends State<TasksList> {
     return ListView.builder(
       itemBuilder: ((context, index) {
         return TasksTile(
-          taskname: widget.tasks[index].name,
+          taskName: widget.tasks[index].name,
           isChecked: widget.tasks[index].isDone,
           checkBoxCallback: (value) {
             setState(() {
-              widget.tasks[index].taskDone();
+              widget.tasks[index].toggleDone();
             });
           },
         );
