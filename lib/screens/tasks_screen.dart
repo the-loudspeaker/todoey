@@ -12,9 +12,6 @@ class TasksScreen extends StatefulWidget {
 
 class _TasksScreenState extends State<TasksScreen> {
   List<Task> tasks = [
-    Task(name: "Buy groceries"),
-    Task(name: "Buy cake"),
-    Task(name: "Calculate bike mileage")
   ];
 
   @override
@@ -30,8 +27,8 @@ class _TasksScreenState extends State<TasksScreen> {
               padding: const EdgeInsets.all(24),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  CircleAvatar(
+                children: [
+                  const CircleAvatar(
                     backgroundColor: Colors.white,
                     radius: 32,
                     child: Icon(
@@ -40,10 +37,10 @@ class _TasksScreenState extends State<TasksScreen> {
                       size: 32,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 16,
                   ),
-                  Text(
+                  const Text(
                     "Todoey",
                     style: TextStyle(
                         color: Colors.white,
@@ -51,13 +48,13 @@ class _TasksScreenState extends State<TasksScreen> {
                         fontWeight: FontWeight.w700),
                   ),
                   Text(
-                    "10 Tasks",
-                    style: TextStyle(
+                    "${tasks.length} Tasks",
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 16,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 16,
                   ),
                 ],
@@ -91,7 +88,12 @@ class _TasksScreenState extends State<TasksScreen> {
               builder: (BuildContext context) => SingleChildScrollView(
                     padding: EdgeInsets.only(
                         bottom: MediaQuery.of(context).viewInsets.bottom),
-                    child: const AddTask(),
+                    child: AddTask(addTasksCallback: (newTaskTitle) {
+                      setState(() {
+                        tasks.add(Task(name: newTaskTitle));
+                      });
+                      Navigator.pop(context);
+                    }),
                   ));
         },
         child: const Icon(Icons.add),
