@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:todoey_flutter/models/task.dart';
 
 class TaskData extends ChangeNotifier {
-  List<Task> tasks = [];
+  List<Task> tasks = [
+    Task(name: "Add tasks by clicking the button below."),
+    Task(name: "Mark a task as done by clicking the checkbox.", isDone: true),
+    Task(name: "Long press a task to delete.")
+  ];
   void addTask(String taskName) {
     tasks.add(Task(name: taskName));
     notifyListeners();
