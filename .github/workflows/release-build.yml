@@ -1,9 +1,9 @@
-name: Flutter CI
+name: release builds
 
 on:
-  push:
-    branches:
-      - releases/*
+  release:
+    tags:
+      - v*
 
 jobs:
   build:
