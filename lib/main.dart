@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:todoey_flutter/models/task_data.dart';
-import 'package:todoey_flutter/screens/tasks_screen.dart';
+import 'package:todoey/models/task_data.dart';
+import 'package:todoey/screens/tasks_screen.dart';
 
 void main() {
   runApp(const MyApp());

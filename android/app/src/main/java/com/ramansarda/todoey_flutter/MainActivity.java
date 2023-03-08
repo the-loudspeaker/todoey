@@ -1,4 +1,4 @@
-package com.ramansarda.todoey_flutter;
+package com.ramansarda.todoey;
 
 import io.flutter.embedding.android.FlutterActivity;
 

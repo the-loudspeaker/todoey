@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:todoey_flutter/models/task_data.dart';
-import 'package:todoey_flutter/screens/add_task.dart';
-import 'package:todoey_flutter/widgets/tasks_list.dart';
+import 'package:todoey/models/task_data.dart';
+import 'package:todoey/screens/add_task.dart';
+import 'package:todoey/widgets/tasks_list.dart';
 
 class TasksScreen extends StatefulWidget {
   const TasksScreen({Key? key}) : super(key: key);

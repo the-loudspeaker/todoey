@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ramansarda.todoey_flutter">
+    package="com.ramansarda.todoey">
    <application
-        android:label="todoey_flutter"
+        android:label="todoey"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
